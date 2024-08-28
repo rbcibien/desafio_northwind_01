@@ -12,6 +12,7 @@ services:
       - postgresql_bin:/usr/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
       - ./northwind.sql:/docker-entrypoint-initdb.d/northwind.sql
+      - ./views.sql:/docker-entrypoint-initdb.d/views.sql
       - ./files:/files
     ports:
       - 55432:5432
